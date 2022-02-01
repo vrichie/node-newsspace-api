@@ -3,7 +3,7 @@ const router=express.Router();
 const pool=require('./connect');
 
 
-router.get('/:category/:id',(req,res)=>{
+router.get('/:category/:id',async (req,res)=>{
     pool.getConnection((err,connection)=>{
         if(err) throw err;
         let limit=parseInt(req.params.id)

@@ -1,20 +1,23 @@
 const mysql=require('mysql');
 
 
-// const pool=mysql.createPool({
-//     connectionLimit:50,
-//     host           :'localhost',
-//     user           :'root',
-//     password       :'',
-//     database       :'newsspace'
+// const pool=mysql.createConnection({
+   
+//     host           :'pld108.truehost.cloud',
+//     user           :'richkin1',
+//     password       :'lvi;Qe5EG)C610',
+//     database       :'richkin1_richking'
     
 // });
+// pool.connect((err)=>{
+//     if(err) throw err;
+//     console.log("connected to db");
 
+// })
 
 
 const pool=mysql.createPool({
-    connectionLimit:50,
-    host           :'localhost',
+    host           :'pld108.truehost.cloud',
     user           :'richkin1',
     password       :'lvi;Qe5EG)C610',
     database       :'richkin1_richking'
@@ -22,7 +25,3 @@ const pool=mysql.createPool({
 });
 module.exports=pool;
 
-// $host="localhost";
-// $usernamr="richkin1";
-// $passcode="";
-// $db="";

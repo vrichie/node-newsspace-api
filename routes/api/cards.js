@@ -4,7 +4,7 @@ const pool=require('./connect');
 
 
 
-router.get('/', (req, res) => {
+router.get('/',async (req, res) => {
     pool.getConnection((err,connection)=>{
         if(err) throw err;
       

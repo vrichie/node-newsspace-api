@@ -5,7 +5,7 @@ const fs=require('fs');
 
 
 
-router.get('/',(req,res)=>{
+router.get('/',async (req,res)=>{
     pool.getConnection((err,connection)=>{
         if(err) throw err;
         connection.query('SELECT * FROM post ',(err,rows)=>{

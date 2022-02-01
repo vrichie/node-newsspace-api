@@ -2,7 +2,7 @@ const express=require('express');
 const router=express.Router();
 const pool=require('./connect');
 
-router.get('/:key/:cart', (req, res) => {
+router.get('/:key/:cart',async (req, res) => {
     pool.getConnection((err,connection)=>{
         if(err) throw err;
 

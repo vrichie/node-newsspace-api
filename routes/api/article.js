@@ -4,7 +4,7 @@ const pool=require('./connect');
 
 
 
-router.get('/:slug',(req,res)=>{
+router.get('/:slug',async (req,res)=>{
     pool.getConnection((err,connection)=>{
         if(err) throw err;
         connection.query('SELECT * FROM post WHERE slug=?',[req.params.slug],(err,rows)=>{
