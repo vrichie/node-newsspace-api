@@ -1,12 +1,12 @@
 const mysql=require('mysql');
 
 
-// const pool=mysql.createConnection({
+// const pool=mysql.createPool({
    
-//     host           :'pld108.truehost.cloud',
-//     user           :'richkin1',
-//     password       :'lvi;Qe5EG)C610',
-//     database       :'richkin1_richking'
+//     host           :'localhost',
+//     user           :'root',
+//     password       :'',
+//     database       :'newsspace'
     
 // });
 // pool.connect((err)=>{
