@@ -12,6 +12,7 @@ router.delete('/:id',async (req, res) => {
         if(err) throw err;
 
         connection.query(sql,[id],(err,rows)=>{
+            connection.release();
 
             if(rows.affectedRows==1){
 

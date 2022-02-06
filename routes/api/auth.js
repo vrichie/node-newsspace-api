@@ -15,9 +15,10 @@ router.post('/',async(req,res)=>{
 
         const sql="SELECT * FROM  editors WHERE username=?";
         connection.query(sql,[username],(err,rows)=>{
+            connection.release();
 
-            console.log(err);
-            console.log(rows);
+            // console.log(err);
+            // console.log(rows);
 
             if(rows.length==0){
                 const user_details={

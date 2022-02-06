@@ -9,19 +9,32 @@ const mysql=require('mysql');
 //     database       :'newsspace'
     
 // });
-// pool.connect((err)=>{
-//     if(err) throw err;
-//     console.log("connected to db");
 
-// })
-
-
+ 
 const pool=mysql.createPool({
+    connectionLimit:1000,
     host           :'pld108.truehost.cloud',
     user           :'richkin1',
     password       :'lvi;Qe5EG)C610',
-    database       :'richkin1_richking'
+    database       :'richkin1_newsspace'
     
 });
+
+// const pool=mysql.createPool({
+
+//     connectionLimit : 1000,
+//     connectTimeout  : 60 * 60 * 1000,
+//     acquireTimeout  : 60 * 60 * 1000,
+//     timeout         : 60 * 60 * 1000,
+//     host            :process.env.HOST_NAME,
+//     user            :'richkin1',
+//     password        :process.env.PASS_W,
+//     database        :'richkin1_newsspace'
+    
+// });
+
+
+
+
 module.exports=pool;
 
