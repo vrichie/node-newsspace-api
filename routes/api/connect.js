@@ -1,24 +1,24 @@
 const mysql=require('mysql');
 
 
-// const pool=mysql.createPool({
-   
-//     host           :'localhost',
-//     user           :'root',
-//     password       :'',
-//     database       :'newsspace'
-    
-// });
-
- 
 const pool=mysql.createPool({
-    connectionLimit:1000,
-    host           :'pld108.truehost.cloud',
-    user           :'richkin1',
-    password       :'lvi;Qe5EG)C610',
-    database       :'richkin1_newsspace'
+   
+    host           :'localhost',
+    user           :'root',
+    password       :'',
+    database       :'newsspace'
     
 });
+
+ 
+// const pool=mysql.createPool({
+//     connectionLimit:1000,
+//     host           :'pld108.truehost.cloud',
+//     user           :'richkin1',
+//     password       :'lvi;Qe5EG)C610',
+//     database       :'richkin1_newsspace'
+    
+// });
 
 // const pool=mysql.createPool({
 
