@@ -6,7 +6,7 @@ const upload=multer({dest:'./public/data/editors_images/'});
 const { uuid } = require('uuidv4');
 
 
-router.get('/',async (req,res)=>{
+router.get('/', (req,res)=>{
     pool.getConnection((err,connection)=>{
         if(err) throw err;
         connection.query('SELECT * FROM post ',(err,rows)=>{
@@ -22,6 +22,7 @@ router.get('/',async (req,res)=>{
 
     })
 
+        // res.send('hello')
 
 
 })
@@ -68,8 +69,6 @@ router.post('/',upload.single('pic'),(req,res)=>{
     })
 
 
-        console.log(title,summary,body,category,tag,creator);
-        console.log(file);
 })
 
 
