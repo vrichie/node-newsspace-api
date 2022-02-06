@@ -49,7 +49,7 @@ router.get('/:key/:cart',async (req, res) => {
     // console.log(key)
     if(category=='all'){
         posts.map((post,index)=>{
-            if(compare.compareTwoStrings(post.title,key)>=0.5){
+            if(compare.compareTwoStrings(post.title,key)>=0){
                 allposts.push(post);
             }
         })
